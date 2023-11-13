@@ -9,9 +9,11 @@
  2. Copy the provided JavaScript code.
  3. Paste the code into the console and press Enter.
 
+
 ## Dataset 
 
 The financial dataset is stored in the 'finances' array, consisting of monthly records with two fields: Date and Profit/Losses.
+
 
 ## Analysis
 
@@ -22,6 +24,7 @@ The code initializes variables and uses a *for* loop to iterate through the fina
 3. *Average Change:* Calculates the average of the changes in Profit/Losses over the entire period.
 4. *Greatest Increase in Profits/Losses:* Identifies the month with the highest increase in Profit/Losses.
 5. *Greatest Decrease in Profits/Losses:* Identifies the month with the highest decrease in Profit/Losses.
+
 
 ## Results
 
@@ -35,7 +38,13 @@ The results of the financial analysis that are logged to the console, providing 
 *Greatest Increase in Profits/Losses: Feb-2012 ($1926159)*
 *Greatest Decrease in Profits/Losses: Sep-2013 ($-2196167)*
 
+
 ## Deployment link
 
 https://goalzz.github.io/Console-Finances/
+
+
+## Screenshot of Results
+
+<img width="513" alt="Screenshot 2023-11-13 at 14 22 32" src="https://github.com/goalzz/Console-Finances/assets/124784722/fbf45a0c-eb7f-4145-a4ce-e53fddad53f3">
 
