@@ -86,3 +86,48 @@ var finances = [
   ['Jan-2017', 138230],
   ['Feb-2017', 671099],
 ];
+
+// Here we initialize the variables: 
+var totalMonths = finances.length;
+var totalProfitLoss = 0;
+var averageChange = 0;
+var greatestIncrease = { amount: 0 };
+var greatestDecrease = { amount: 0 };
+
+// Used the for loop to perform analysis
+for (var i = 0; i < finances.length; i++) {
+  // Extract month and profit/loss
+  var month = finances[i][0];
+  var profitLoss = finances[i][1];
+
+  // The total profit/ loss calculation:
+  totalProfitLoss += profitLoss;
+
+  // Change in profit/loss 
+  if (i > 0) {
+    var change = profitLoss - finances[i - 1][1];  //skipping for the first month 
+    averageChange += change; 
+
+                  // G increase/decrease
+    if (change > greatestIncrease.amount) {
+      greatestIncrease.amount = change;
+      greatestIncrease.date = month;
+    } else if (change < greatestDecrease.amount) {
+      greatestDecrease.amount = change;
+      greatestDecrease.date = month;
+    }
+  }
+}
+
+// Average change
+averageChange /= totalMonths - 1;
+
+// Logging the data on the console
+console.log("Financial Analysis");
+console.log("------------------");
+console.log("Total Months: " + totalMonths);
+console.log("Total: $" + totalProfitLoss);
+console.log("Average Change: $" + averageChange.toFixed(2));
+console.log("Greatest Increase in Profits/Losses: " + greatestIncrease.date + " ($" + greatestIncrease.amount + ")");
+console.log("Greatest Decrease in Profits/Losses: " + greatestDecrease.date + " ($" + greatestDecrease.amount + ")");
+
